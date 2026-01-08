@@ -1,0 +1,18 @@
+/*use this curl request to setup api in the postman*/
+
+curl --location 'localhost/orgOnboarding/api/bulk-onboard' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: XSRF-TOKEN=eyJpdiI6InVuZnBkSnBjcjllSVpHdDA4OTNqb1E9PSIsInZhbHVlIjoiNW03NDhiSlpqM0R2M29UU1RiU2RUUGZpWXppOU15WUNPbU54ajY4cFVsTTVXSzNBZi9peXdXQUZuaG1aLzM5NlFCZk4vd3c4aWRxZGZOdnNBNFVFQXNIcGRSclBxK2dmSWdLWnFrVjJYYyt5U2JWRVlCRzAvaS9nOEVDNkUvUXQiLCJtYWMiOiIxMjAxNGZkZGQyOWJkNDljZTQ5NGNkOGI5NmU5YjgxNzFkZmE3ZjE2NTMwZTA4YTkzZmUwOThhNDJjMzE3YWVmIiwidGFnIjoiIn0%3D; laravel_session=eyJpdiI6IlhXcnVXaEFDdDU1VGtUMWZFZzhlY0E9PSIsInZhbHVlIjoiSFczeUxSYlVGUDFLSk9xOXlCQ0tNaGY3aTZOVnVJNWVBc29hcjRodzNqOWxTTVo5ak9CTGJQb044UWhSK09NT3NZK0NKdzhLMy9BWVFOL1JpdW5HcURSSnVDbUhobndvZ0w1YkVka3NCTVR0MzcxVHV5aEM0VmprRDhqdDA1dHciLCJtYWMiOiI4MDc0NzFkYjJmMDgzYzU3MzE5MWUwNjgzYjFjNTY5Y2U1NGJiMDFlMDI4MWIwOTc1YTUwMTM1YTdiOWFmZjFiIiwidGFnIjoiIn0%3D' \
+--data-raw '{
+    "organizations": [
+    {
+      "name": "Acme Corp",
+      "domain": "acme.com",
+      "contact_email": "admin@acme.com"
+    },
+    {
+      "name": "Beta Ltd",
+      "domain": "beta.com"
+    }
+  ]
+}'
